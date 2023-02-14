@@ -10,7 +10,7 @@ def push_server_chan(logs):
         'title': "网易云音乐自动脚本",
         'text': logs,
         'to': 'pussy',
-        'sendkey':
+        'sendkey':sendkey
     }
     serverURL = "http://info.582068.xyz"
     response = requests.session().post(serverURL, data=params)
