@@ -7,10 +7,12 @@ def push_server_chan(logs):
         print("跳过推送")
         return
     params = {
-        'text': "网易云音乐自动脚本",
-        'desp': logs
+        'title': "网易云音乐自动脚本",
+        'text': logs,
+        'to': 'pussy',
+        'sendkey':
     }
-    serverURL = "https://sc.ftqq.com/" + sckey + ".send"
+    serverURL = "http://info.582068.xyz"
     response = requests.session().post(serverURL, data=params)
     if response.status_code == 200:
         print("推送成功")
