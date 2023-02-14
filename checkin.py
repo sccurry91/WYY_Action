@@ -2,7 +2,7 @@ import requests, base64, json, hashlib
 from Crypto.Cipher import AES
 
 
-def push_server_chan(logs):
+def push_server_chan(logs, sendkey):
     if sckey is None or sckey == "":
         print("跳过推送")
         return
@@ -158,5 +158,5 @@ if __name__ == '__main__':
             except BaseException as e:
                 logs += "程序出现异常"+e
         logs += "执行完成"
-    push_server_chan(logs)
+    push_server_chan(logs, sendkey)
     exit()
