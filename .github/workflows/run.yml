@@ -27,11 +27,9 @@ jobs:
 
           user='${{ secrets.USER }}'
           pwd='${{ secrets.PWD }}'
-          sendkey='${{ secrets.SENDKEY }}'
           sckey='${{ secrets.SCKEY }}'
           python3 checkin.py <<EOF
           ${user}
           ${pwd}
-          ${sendkey}
           ${sckey}
           EOF
